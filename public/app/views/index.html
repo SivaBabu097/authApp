@@ -3,8 +3,11 @@
   <head>
     <base href="/">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Auth..MEAN</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/views/master.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" charset="utf-8"></script>
@@ -16,7 +19,8 @@
     <script src="app/services/authService.js" charset="utf-8"></script>
     <script src="app/controllers/mainCtrl.js" charset="utf-8"></script>
   </head>
-  <body ng-app="mym" ng-controller="mainCtrl as main" class="container" ng-show="main.loadMe" ng-cloak>
+  <body ng-app="mym" ng-controller="mainCtrl as main" ng-show="main.loadMe" ng-cloak>
+    
       <nav class="navbar navbar-inverse">
         <div class="container">
           <div class="navbar-header">
@@ -52,13 +56,7 @@
         </div>
       </nav>
 
-      <div class="container theme-showcase" role="main">
+      <ng-view></ng-view>
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1>Theme example</h1>
-          <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-        </div>
-        <ng-view></ng-view>
     </body>
   </html>
